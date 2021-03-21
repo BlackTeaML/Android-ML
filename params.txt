@@ -1,0 +1,2 @@
+ndk_path_here
+project_dir_here
