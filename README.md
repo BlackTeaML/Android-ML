@@ -14,7 +14,7 @@ Based on [Hooking-and-Patching-android-template](https://github.com/Djngo/Hookin
 ```
 
 ## Loading the libandroidml.so
-1. Open GeometryDsah/smali/com/robtopx/geometryjump/geometryjump.smali
+1. Open GeometryDash/smali/com/robtopx/geometryjump/geometryjump.smali
 2. Add this to the first static constructor method
 ```
   .line 70
