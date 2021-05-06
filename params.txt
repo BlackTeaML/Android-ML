@@ -1,2 +1,2 @@
-ndk_path_here
-project_dir_here
+android_ndk_path (%NDK_ROOT%)
+project_path

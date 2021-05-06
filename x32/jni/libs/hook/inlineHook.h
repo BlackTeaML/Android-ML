@@ -20,7 +20,7 @@ enum ele7en_status {
 };
 
 // stolen from nickname's ml
-#define hook(z, x, y) registerInlineHook((uint32_t)dlsym(dlopen("libcocos2dcpp.so", RTLD_LAZY), z), (uint32_t)x, (uint32_t**)&y);
+#define hook(z, m, x, y) registerInlineHook((uint32_t)dlsym(dlopen("libcocos2dcpp.so", RTLD_LAZY), z), (uint32_t)m::x, (uint32_t**)&m::y);
 
 enum ele7en_status registerInlineHook(uint32_t target_addr, uint32_t new_addr, uint32_t **proto_addr);
 enum ele7en_status inlineUnHook(uint32_t target_addr);

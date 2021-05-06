@@ -6,20 +6,76 @@
 
 using namespace cocos2d;
 
-CCNode* (*old_PlayerObject_create)(CCNode*, int, int, CCLayer*);
-CCNode* playerObject_create(CCNode* self, int int1, int int2, CCLayer* layer) {
-	if(self != nullptr) {
-		CCNode* ret = old_PlayerObject_create(self, int1, int2, layer);
-		// idk why bit i like it
-		ret->setScale(2);
+// OMg BLaCkteA
+class CreatorLayer : public CCLayer {
+public:
+	static CCScene* scene();
+	static CCLayer* create();
+	void onTreasureRoom(CCObject* pSender);
+	void onSecretVault(CCObject* pSender);
+	void onChallenge(CCObject* pSender);
+	void onWeeklyLevel(CCObject* pSender);
+	void onGauntlets(CCObject* pSender);
+	void onMapPacks(CCObject* pSender);
+	void onFameLevels(CCObject* pSender);
+	void onOnlineLevels(CCObject* pSender);
+	void onLeaderboards(CCObject* pSender);
+	void onSavedLevels(CCObject* pSender);
+	void onMyLevels(CCObject* pSender);
+	void onDailyLevel(CCObject* pSender);
+	void onFeaturedLevels(CCObject* pSender);
+	bool init();
+};
+
+namespace h_menuLayer {
+	void* (*o_init)(CCLayer*);
+	void* init(CCLayer* self) {
+		auto ret = o_init(self);
+		auto sprite = CCSprite::createWithSpriteFrameName("GJ_playBtn_001.png");
+		auto btn = CCMenuItemSprite::create(sprite, sprite, self, menu_selector(CreatorLayer::onDailyLevel));
+		btn->setScale(0.5);
+		auto menu = CCMenu::create();
+		menu->addChild(btn, 100);
+		menu->setPosition({CCDirector::sharedDirector()->getVisibleSize().width / 2, 100});
+		self->addChild(menu, 100);
 		return ret;
 	}
-	return old_PlayerObject_create(self, int1, int2, layer);
 }
 
-__attribute__((constructor))
-void libblacktea_main() {
+// https://github.com/FlairyDash/rgb-icons-mod/blob/main/main.cpp
+namespace h_playerObject {
+	CCNode* (*o_create)(CCNode*, int, int, CCLayer*);
+	CCNode* create(CCNode* self, int i1, int i2, CCLayer* layer) {
+		if(self != nullptr) {
+			CCNode* ret = o_create(self, i1, i2, layer);
+			ret->runAction(CCRepeatForever::create(CCSequence::create(
+				CCTintTo::create(0.5, 255,   0,	  0), 
+				CCTintTo::create(0.5, 255, 255,   0), 
+				CCTintTo::create(0.5, 0  , 255,   0),
+				CCTintTo::create(0.5, 0  , 255, 255), 
+				CCTintTo::create(0.5, 0  ,   0, 255), 
+				CCTintTo::create(0.5, 255,   0, 255), 
+				nullptr)));
+			CCNode* a = (CCNode*)ret;
+			CCNode* b = (CCNode*)a->getChildren()->objectAtIndex(0);
+			CCNode* c = (CCNode*)b->getChildren()->objectAtIndex(0);
+			c->runAction(CCRepeatForever::create(CCSequence::create(
+				CCTintTo::create(0.5, 0  , 255, 255), 
+				CCTintTo::create(0.5, 0  ,   0, 255), 
+				CCTintTo::create(0.5, 255,   0, 255), 
+				CCTintTo::create(0.5, 255,   0,	  0), 
+				CCTintTo::create(0.5, 255, 255,   0), 
+				CCTintTo::create(0.5, 0  , 255,   0),
+				nullptr)));
+			return ret;
+		}
+		return o_create(self, i1, i2, layer);
+	}
+}
 
-	hook("_ZN12PlayerObject6createEiiPN7cocos2d7CCLayerE", playerObject_create, old_PlayerObject_create);
-	inlineHookAll();
+
+__attribute__((constructor))
+void fdml_init() {
+	hook("_ZN9MenuLayer4initEv", h_menuLayer, init, o_init);
+	hook("_ZN12PlayerObject6createEiiPN7cocos2d7CCLayerE", h_playerObject, create, o_create);	inlineHookAll();
 }
