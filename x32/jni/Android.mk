@@ -8,7 +8,8 @@ LOCAL_EXPORT_C_INCLUDES := $(MAIN_LOCAL_PATH) \
 	$(MAIN_LOCAL_PATH)/libs/cocos2dx/include \
 	$(MAIN_LOCAL_PATH)/libs/cocos2dx/platform \
 	$(MAIN_LOCAL_PATH)/libs/cocos2dx/platform/android \
-	$(MAIN_LOCAL_PATH)/libs/cocos2dx/kazmath/include
+	$(MAIN_LOCAL_PATH)/libs/cocos2dx/kazmath/include \
+	$(MAIN_LOCAL_PATH)/libs/gd
 LOCAL_SRC_FILES := ${MAIN_LOCAL_PATH}/include/libcocos2dcpp.so
 include $(PREBUILT_SHARED_LIBRARY)
 
@@ -25,7 +26,8 @@ LOCAL_C_INCLUDES += $(MAIN_LOCAL_PATH) \
 	$(MAIN_LOCAL_PATH)/libs/cocos2dx/include \
 	$(MAIN_LOCAL_PATH)/libs/cocos2dx/platform \
 	$(MAIN_LOCAL_PATH)/libs/cocos2dx/platform/android \
-	$(MAIN_LOCAL_PATH)/libs/cocos2dx/kazmath/include
+	$(MAIN_LOCAL_PATH)/libs/cocos2dx/kazmath/include \
+	$(MAIN_LOCAL_PATH)/libs/gd
 
 LOCAL_SRC_FILES := src/main.cpp \
 	libs/hook/inlineHook.c \

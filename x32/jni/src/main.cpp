@@ -2,30 +2,10 @@
 #include <cstdlib>
 #include <dlfcn.h>
 #include <cocos2d.h>
+#include <gd.h>
 #include "libs/hook/inlineHook.h"
 
 using namespace cocos2d;
-
-// OMg BLaCkteA
-class CreatorLayer : public CCLayer {
-public:
-	static CCScene* scene();
-	static CCLayer* create();
-	void onTreasureRoom(CCObject* pSender);
-	void onSecretVault(CCObject* pSender);
-	void onChallenge(CCObject* pSender);
-	void onWeeklyLevel(CCObject* pSender);
-	void onGauntlets(CCObject* pSender);
-	void onMapPacks(CCObject* pSender);
-	void onFameLevels(CCObject* pSender);
-	void onOnlineLevels(CCObject* pSender);
-	void onLeaderboards(CCObject* pSender);
-	void onSavedLevels(CCObject* pSender);
-	void onMyLevels(CCObject* pSender);
-	void onDailyLevel(CCObject* pSender);
-	void onFeaturedLevels(CCObject* pSender);
-	bool init();
-};
 
 namespace h_menuLayer {
 	void* (*o_init)(CCLayer*);
