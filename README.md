@@ -24,10 +24,10 @@ Based on [Hooking-and-Patching-android-template](https://github.com/Djngo/Hookin
 
 ---
 ## Special thanks
-- Pie for headers
-- HJfod for headers
-- Adaf for headers, haxormode and beeing Adaf
-- FlairyDash for development help
+- [Pie](https://github.com/poweredbypie) for headers
+- [HJfod](https://github.com/HJfod) for headers
+- [Adaf](https://github.com/adafcaefc) for headers, haxormode and beeing Adaf
+- [FlairyDash](https://github.com/FlairyDash) for development help
 
 ---
 ### Join [Galaxium](https://discord.gg/ZV2zDu6JUX)
