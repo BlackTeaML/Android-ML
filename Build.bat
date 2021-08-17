@@ -20,3 +20,4 @@ call ndk-build NDK_PROJECT_PATH=%pp%\x32 NDK_APPLICATION_MK=%pp%\x32\jni\Applica
 if "%errorlevel%" == "0" (echo %ESC%[92mBuild successful%ESC%[0m) else (echo %ESC%[91mBuild failed%ESC%[0m)
 xcopy /y "%pp%\x32\libs\armeabi-v7a" "%pp%\out\armeabi-v7a\"*
 echo.
+pause
