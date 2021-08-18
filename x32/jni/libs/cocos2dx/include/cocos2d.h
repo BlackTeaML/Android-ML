@@ -110,6 +110,7 @@ THE SOFTWARE.
 // menu_nodes
 #include "menu_nodes/CCMenu.h"
 #include "menu_nodes/CCMenuItem.h"
+#include "menu_nodes/CCMenuItemSpriteExtra.h"
 
 // misc_nodes
 #include "misc_nodes/CCClippingNode.h"
