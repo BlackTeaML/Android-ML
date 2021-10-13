@@ -1,33 +1,32 @@
 # Android-ML
----
 First open source android modding library for Geometry Dash  
-Based on [Hooking-and-Patching-android-template](https://github.com/Djngo/Hooking-and-Patching-android-template)
 ---
 
-## Installation
-1. Download this github files and unzip it
-2. Download [Android NDK 16b](https://developer.android.com/ndk/downloads/older_releases)
+<img src="https://media.discordapp.net/attachments/707518553682739243/887816204465606666/image0.jpg?width=400&height=207" width="14px" height="14px"> Cool img
+
+## Setup
+1. Clone this repo
+2. Install CMake
+2. Download [Android NDK](https://developer.android.com/ndk/downloads)
+4. `export NDK="/path/to/ndk"`
 
 ## Compiling
 ```sh
-./build.bat
-```
+# Linux
+./build.sh
 
-## Loading the libandroidml.so
-1. Open GeometryDash/smali/com/robtopx/geometryjump/geometryjump.smali
-2. Add this to the first static constructor method
-```
-  .line 70
-  const-string v0, "androidml"
-  invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
+# Windows
+mkdir build
+cd build
+cmake ..
+cmake --build .
 ```
 
 ---
 ## Special thanks
-- [Pie](https://github.com/poweredbypie) for headers
-- [HJfod](https://github.com/HJfod) for headers
-- [Adaf](https://github.com/adafcaefc) for headers, haxormode and beeing Adaf
-- [FlairyDash](https://github.com/FlairyDash) for development help
+- [Pie](https://github.com/poweredbypie) - headers
+- [HJfod](https://github.com/HJfod) - headers
+- [Adaf](https://github.com/adafcaefc) - headers, haxormode
 
 ---
 ### Join [Galaxium](https://discord.gg/ZV2zDu6JUX)
