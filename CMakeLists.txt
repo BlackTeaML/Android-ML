@@ -28,5 +28,6 @@ target_include_directories(${MODNAME} PRIVATE
 
 target_link_libraries(${MODNAME} ${CMAKE_CURRENT_SOURCE_DIR}/libs/${CMAKE_ANDROID_ARCH_ABI}/libcocos2dcpp.so)
 target_link_libraries(${MODNAME} ${CMAKE_CURRENT_SOURCE_DIR}/libs/${CMAKE_ANDROID_ARCH_ABI}/libdobby.a)
+target_link_libraries(${MODNAME} log)
 
 install(TARGETS ${MODNAME} LIBRARY)
