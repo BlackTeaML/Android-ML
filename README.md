@@ -2,8 +2,6 @@
 First open source android modding library for Geometry Dash  
 ---
 
-<img src="https://media.discordapp.net/attachments/707518553682739243/887816204465606666/image0.jpg?width=400&height=207" width="14px" height="14px"> Cool img
-
 ## Setup
 1. Clone this repo
 2. Install CMake
@@ -15,7 +13,7 @@ First open source android modding library for Geometry Dash
 # Linux
 ./build.sh
 
-# Windows
+# Windows (untested)
 mkdir build
 cd build
 cmake ..
