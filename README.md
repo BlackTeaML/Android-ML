@@ -6,13 +6,7 @@ First open source android modding library for Geometry Dash
 1. Clone this repo
 2. Install CMake
 2. Download [Android NDK](https://developer.android.com/ndk/downloads)
-4. ```sh
-# Linux
-export NDK="/path/to/ndk"
-
-# Windows
-set NDK="/path/to/ndk"
-```
+4. `Linux: export NDK="/path/to/ndk"; Windows: set NDK="/path/to/ndk"
 
 ## Compiling
 ```sh
@@ -28,6 +22,7 @@ set NDK="/path/to/ndk"
 - [Pie](https://github.com/poweredbypie) - headers
 - [HJfod](https://github.com/HJfod) - headers
 - [Adaf](https://github.com/adafcaefc) - headers, haxormode
+- [Kafif](https://github.com/cafeed28) - bindows support
 
 ---
 ### Join [Galaxium](https://discord.gg/ZV2zDu6JUX)
