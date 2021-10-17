@@ -23,6 +23,7 @@ target_include_directories(${MODNAME} PRIVATE
   ${CMAKE_CURRENT_SOURCE_DIR}/include/cocos2dx/include
   ${CMAKE_CURRENT_SOURCE_DIR}/include/cocos2dx/kazmath/include
   ${CMAKE_CURRENT_SOURCE_DIR}/include/cocos2dx/platform/android
+  ${CMAKE_CURRENT_SOURCE_DIR}/include/cocos2dx/platform/third_party/android/prebuit/libcurl/include
   ${CMAKE_CURRENT_SOURCE_DIR}/include/extensions
 )
 
