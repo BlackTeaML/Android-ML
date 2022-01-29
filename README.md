@@ -22,7 +22,7 @@ First open source android modding library for Geometry Dash
 - [Pie](https://github.com/poweredbypie) - headers
 - [HJfod](https://github.com/HJfod) - headers
 - [Adaf](https://github.com/adafcaefc) - headers, haxormode
-- [Kafif](https://github.com/cafeed28) - bindows support
+- [Kafif](https://github.com/cafeed28) - Windows support
 
 ---
 ### Join [Galaxium](https://discord.gg/ZV2zDu6JUX)
