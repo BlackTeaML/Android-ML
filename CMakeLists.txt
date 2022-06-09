@@ -6,7 +6,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/out)
 set(CMAKE_SYSTEM_NAME Android)
 set(CMAKE_SYSTEM_VERSION 21)
-set(CMAKE_ANDROID_ARCH_ABI armeabi-v7a) # armeabi-v7a / x86 (untested)
+set(CMAKE_ANDROID_ARCH_ABI arm64-v8a) # arm64-v8a / armeabi-v7a
 set(CMAKE_ANDROID_STL_TYPE c++_static)
 set(MODNAME gdmod)
 
